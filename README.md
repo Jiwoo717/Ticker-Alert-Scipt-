@@ -12,8 +12,9 @@ Designed monitor stock price movements and fire alerts through email. Searches s
 - Python 3.x
 - Required Python packages: `requests`, `smtplib`
 
-### Installation 
-If you found this useful, try it on your local computer.
+## Run Locally
+If you found this useful, you can try it on your local computer.
+
 1. Clone this repository:
 ```bash
-git clone 
+git clone https://github.com/Jiwoo717/Ticker-Alert-Scipt-.git
