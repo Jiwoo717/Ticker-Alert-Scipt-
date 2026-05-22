@@ -4,14 +4,14 @@ import smtplib
 from bs4 import BeautifulSoup
 from email.message import EmailMessage
 
-# Fetch environment variables
+# environment variables
 API_KEY = os.environ.get('ALPHA_VANTAGE_API_KEY')
 EMAIL_PASSWORD = os.environ.get('ALERT_EMAIL_PASSWORD')
 
 STOCK_SYMBOLS = ['AAPL', 'GOOGL', 'AMZN']
-ALERT_THRESHOLD = 1.10  # Default 10% spike
+ALERT_THRESHOLD = 1.10
 
-# For TempMail
+# TempMail
 BASE_URL = "https://temp-mail.org/en/"
 
 def get_temp_email():
@@ -26,7 +26,7 @@ def get_temp_email():
 
 EMAIL_ADDRESS = get_temp_email()
 
-# Fetch the latest and historical stock prices
+# historical stock prices
 def get_stock_price(symbol):
     url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}'
     try:
@@ -37,7 +37,7 @@ def get_stock_price(symbol):
         print(f"Failed to fetch data for {symbol}. Error: {e}")
         return None
 
-# Send an email alert
+# send email alert
 def send_email(subject, content):
     msg = EmailMessage()
     msg.set_content(content)
