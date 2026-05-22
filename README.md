@@ -1,6 +1,6 @@
 # Ticker-Alert-Scipt-
 
-Ticker Tracker is a Python-based tool designed to monitor stock price movements. Specifically, what I aim to get it to do is to look out for significant prices spikes, at which point alerts me through email 
+Designed monitor stock price movements and fire alerts through email. Structurally it searches specified tickers, looks out for significant prices spikes (the percentage spike can be changed), at which point alerts me through email.
 
 ## Features
 
